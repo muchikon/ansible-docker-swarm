@@ -8,6 +8,6 @@
     - software-properties-common 
   tags: docker
 
-- name: Install Docker-CE
+- name: Install Docker.io
   apt: name="docker.io" state=latest update_cache=yes
   tags: docker
