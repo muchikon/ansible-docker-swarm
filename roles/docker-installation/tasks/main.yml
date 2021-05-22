@@ -1,11 +1,6 @@
 ---
 - name: Install Docker Dependencies
-  apt: name={{ item }} state=latest update_cache=yes
-  with_items:
-    - apt-transport-https
-    - ca-certificates
-    - curl
-    - software-properties-common 
+  apt: name: ['ntp', 'python', 'tcpdump', 'wget', 'openssl', 'curl','tcpdump', 'nmap', 'net-tools', 'iftop', 'htop', 'vim', 'inxi', 'nmon', 'glances', 'mtr', 'traceroute'] state=latest update_cache=yes
   tags: docker
 
 - name: Install Docker.io
