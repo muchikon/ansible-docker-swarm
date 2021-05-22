@@ -8,3 +8,13 @@
     - wget
     - openssl
     - curl
+    - nmap
+    - net-tools
+    - iftop
+    - htop
+    - vim
+    - inxi
+    - nmon
+    - glances
+    - mtr
+    - traceroute
