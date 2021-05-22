@@ -1,5 +1,6 @@
 ---
 - name: setup pre-requisites
+  become: yes
   hosts: all
   roles:
     - create-sudo-user
