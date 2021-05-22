@@ -1,20 +1,4 @@
 ---
 - name: Install Packages
-  apt: name={{ item }} state=latest update_cache=yes
-  with_items:
-    - ntp
-    - python
-    - tcpdump
-    - wget
-    - openssl
-    - curl
-    - nmap
-    - net-tools
-    - iftop
-    - htop
-    - vim
-    - inxi
-    - nmon
-    - glances
-    - mtr
-    - traceroute
+  apt: name: ['ntp', 'python', 'tcpdump', 'wget', 'openssl', 'curl','tcpdump', 'nmap', 'net-tools', 'iftop', 'htop', 'vim', 'inxi', 'nmon', 'glances', 'mtr', 'traceroute'] state=latest update_cache=yes
+  
