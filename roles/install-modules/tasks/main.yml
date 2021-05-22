@@ -4,4 +4,11 @@
     name: ['ntp', 'python', 'tcpdump', 'wget', 'openssl', 'curl','tcpdump', 'nmap', 'net-tools', 'iftop', 'htop', 'vim', 'inxi', 'nmon', 'glances', 'mtr', 'traceroute'] 
     state: latest 
     update_cache: yes
-  
+    
+- name: Remove useless packages from the cache
+  apt:
+    autoclean: yes
+
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
