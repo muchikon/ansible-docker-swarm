@@ -1,8 +1,14 @@
 ---
 - name: Install Docker Dependencies
-  apt: name: ['ntp', 'python', 'tcpdump', 'wget', 'openssl', 'curl','tcpdump', 'nmap', 'net-tools', 'iftop', 'htop', 'vim', 'inxi', 'nmon', 'glances', 'mtr', 'traceroute'] state=latest update_cache=yes
+  apt: 
+    name: ['ntp', 'python', 'tcpdump', 'wget', 'openssl', 'curl','tcpdump', 'nmap', 'net-tools', 'iftop', 'htop', 'vim', 'inxi', 'nmon', 'glances', 'mtr', 'traceroute'] 
+    state: latest
+    update_cache: yes
   tags: docker
 
 - name: Install Docker.io
-  apt: name="docker.io" state=latest update_cache=yes
+  apt: 
+    name="docker.io" 
+    state: latest 
+    update_cache: yes
   tags: docker
