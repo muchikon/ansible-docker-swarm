@@ -1,5 +1,6 @@
 ---
 - name: Create Sudo User
+  become: yes
   user: name=docker
         groups=sudo
         shell=/bin/bash
@@ -7,6 +8,7 @@
         state=present
 
 - name: Set Passwordless SSH Access for docker user
+  become: yes
   copy: src=sudoers
         dest=/etc/sudoers.d
         mode=0440
